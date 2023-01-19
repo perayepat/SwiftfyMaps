@@ -6,7 +6,7 @@ struct CityTitle: ViewModifier{
     func body(content: Content) -> some View {
         
         content
-            .font(.title)
+            .font(.title3)
             .fontWeight(.bold)
             .foregroundColor(.black)
             .frame(height: 55)
