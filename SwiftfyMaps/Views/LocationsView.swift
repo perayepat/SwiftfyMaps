@@ -6,10 +6,9 @@ struct LocationsView: View {
     @EnvironmentObject private var viewModel : LocationsViewModel
     
     var body: some View {
-        List {
-            ForEach(viewModel.locations){ city in
-                Text(city.cityName)
-            }
+        ZStack {
+            Map(coordinateRegion: $viewModel.mapRegion)
+                .ignoresSafeArea()
         }
     }
 }
