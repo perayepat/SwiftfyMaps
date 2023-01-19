@@ -1,17 +1,15 @@
-//
-//  SwiftfyMapsApp.swift
-//  SwiftfyMaps
-//
-//  Created by Pat on 2023/01/19.
-//
-
 import SwiftUI
 
 @main
 struct SwiftfyMapsApp: App {
+    
+    @StateObject private var viewModel = LocationsViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ///Any thing in this view will have refrence to this environment
+            LocationsView()
+                .environmentObject(viewModel)
         }
     }
 }
